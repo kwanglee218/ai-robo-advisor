@@ -212,8 +212,8 @@ tab1, tab2, tab3 = st.tabs(tabs_list)
 # 1번 탭: 시장 분석
 # ------------------------------------------------------------------
 with tab1:
-    st.header(f"### 🔍 {selected_stock}")
-    
+#    st.header(f"🔍 {selected_stock}")
+    st.markdown(f"### 🔍 {selected_stock}")    
     # [버튼 클릭 시] -> 결과를 계산하고 '저장'만 합니다.
     if st.button("🚀 AI 분석 실행하기", key="run_ai_1"):
         with st.spinner(f"AI가 '{selected_stock}' 시장 뉴스를 분석 중입니다..."):
@@ -238,8 +238,8 @@ with tab1:
 # 2번 탭: 퀀트 분석
 # ------------------------------------------------------------------
 with tab2:
-    st.header(f"### 📈 {selected_stock}")
-    
+#    st.header(f"### 📈 {selected_stock}")
+    st.markdown(f"### 📈 {selected_stock}")        
     if st.button("🚀 AI 분석 실행하기", key="run_ai_2"):
         with st.spinner(f"AI가 '{selected_stock}' 기술적 지표를 계산 중입니다..."):
             try:
@@ -263,8 +263,8 @@ with tab2:
 # 3번 탭: 종합 전략 (Robo Advisory)
 # ------------------------------------------------------------------
 with tab3:
-    st.header("### 💰 AI 투자 전략 보고서")
-    
+#    st.header("### 💰 AI 투자 전략 보고서")
+    st.markdown("### 💰 AI 투자 전략 보고서")    
     if st.button("🚀 AI 분석 실행하기", key="run_ai_3"):
         with st.spinner("AI 위원회가 최종 전략을 수립하고 있습니다..."):
             try:
