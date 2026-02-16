@@ -7,12 +7,13 @@ class PortfolioTools:
     # 1. 여기에 내 종목들을 '리스트'로 정의합니다.
     # (나중에 이 부분만 수정하면 분석 대상이 바뀝니다)
     MY_PORTFOLIO = [
-#        "Hanwha Solutions Corp",
-#        "Hotel Shilla Co Ltd",
-#        "Doosan Enerbility Co Ltd"
-         "LIG Nex1 Co., Ltd.", 
-         "HD Hyundai Electric Co., Ltd.", 
-         "ALTEOGEN Inc."  
+        "Hanwha Solutions Corp",
+        "Hotel Shilla Co Ltd",
+        "Doosan Enerbility Co Ltd",
+        "Hugel, Inc.",
+        "LIG Nex1 Co., Ltd.", 
+        "HD Hyundai Electric Co., Ltd." 
+#         "ALTEOGEN Inc."  
     ]
 
     @tool("User Portfolio Retrieval")

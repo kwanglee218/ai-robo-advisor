@@ -3,10 +3,9 @@ from crewai import Agent
 from crewai_tools import SerperDevTool
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
-from tools.portfolio_tool import PortfolioTools # 👈 추가
+from tools.portfolio_tool import PortfolioTools
 
 # 1. 님이 만든 계산기 도구 가져오기
-# (tools 폴더 안에 calculator_tool.py 파일이 있어야 합니다)
 from tools.calculator_tool import StockTools
 
 # 2. 환경변수 로드
@@ -50,21 +49,7 @@ class InvestmentAgents:
             goal='수집된 정보를 바탕으로 현재 포트폴리오 전략 제시',
             backstory="""당신은 20년 경력의 포트폴리오 매니저입니다. 내 포트폴리오를 기반으로 매수/매도 전략 수립.
             전체적인 정보를 분석해서 현재 포트폴리오 매수/매도/보유 전략을 제시하고 냉철한 분석 보고서를 작성합니다.""",
-            tools=[PortfolioTools.get_current_portfolio], # 이 사람은 도구 없이 머리로 판단함
+            tools=[PortfolioTools.get_current_portfolio], 
             llm=llm,
             verbose=True
         )
-
-
-# ---------------------------------------------------------
-# [테스트용 코드] 이 파일을 직접 실행할 때만 작동
-# ---------------------------------------------------------
-# if __name__ == "__main__":
-#     print("\n🧪 에이전트 테스트 시작...")
-#     try:
-#         agents = InvestmentAgents()
-#         quant = agents.quant_analyst()
-#         print("✅ 퀀트 에이전트 생성 성공!")
-#         print(f"사용 도구: {[t.name for t in quant.tools]}")
-#     except Exception as e:
-#         print(f"❌ 에러 발생: {e}")  

@@ -55,11 +55,36 @@ crew = Crew(
     verbose=True
 )
 
+### testing
+crew_research = Crew(
+    agents=[researcher],
+    tasks=[task_research],
+    verbose=True    
+)
+
+crew_quant = Crew(
+    agents=[quant],
+    tasks=[task_quant],
+    verbose=True    
+)
+
+crew_strategy = Crew(
+    agents=[strategist],
+    tasks=[task_strategy],
+    verbose=True    
+)
+
 # 6. 작업 시작
 print(f"\n\n🚀 총 {len(my_stocks)}개 종목에 대한 대규모 분석을 시작합니다...\n")
 result = crew.kickoff()
+result_research = crew_research.kickoff()
+result_quant = crew_quant.kickoff()
+result_strategy = crew_strategy.kickoff()
 
-print("\n\n########################")
-print("## 📊 포트폴리오 종합 리포트 ##")
-print("########################\n")
-print(result)
+
+#print("\n\n########################")
+#print("## 📊 포트폴리오 종합 리포트 ##")
+#print("########################\n")
+
+
+#print(result_research)

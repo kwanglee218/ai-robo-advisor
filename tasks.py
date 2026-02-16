@@ -6,7 +6,6 @@
 # Context (참고 자료): "앞에 김철수 직원이 조사한 내용을 보고 나서 이 일을 해라."
 # 요약: Agent에게 '테슬라 분석 보고서 써와'라고 업무 지시 내린다.
 
-# tasks.py (전체 덮어쓰기 추천)
 from crewai import Task
 
 class InvestmentTasks:
